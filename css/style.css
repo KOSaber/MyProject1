@@ -1,8 +1,12 @@
 *{
-    background-color: rgb(233, 184, 187);
+    background-color: rgb(202, 198, 198);
 }
-h2{
+/* html{
+    background-image: url("https://consumer-img.huawei.com/content/dam/huawei-cbg-site/common/campaign-arab/emui10/img/pc/connect_tv_before.png");
+} */
+h3{
     text-align: center;
+    color: teal;
 }
 #container{
     display: flex;
