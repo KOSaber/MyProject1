@@ -1,4 +1,6 @@
-
+*{
+    background-color: rgb(233, 184, 187);
+}
 h2{
     text-align: center;
 }
@@ -13,19 +15,67 @@ h2{
     align-content: center;
     flex-wrap: wrap;
     background-color: rgb(34, 34, 110);
-    width: 90%;
-    margin: 5% 5% 0 5%; 
+    width: 50%;
+    margin: 0 25% 0 25%; 
 }
-button{
+#board > button{
     background-color: white;
     border-radius: 50%;
-    color: white;
+    color: rgba(19, 19, 85,0);
     padding: 20px;
     margin: 20px;
     cursor: pointer;
-    width: 10%;
+    width: 15%;
+    font-size: 24px;
 }
 #base {
     height: 20px;
+    width: 60%;
     background-color: rgb(19, 19, 85);
+    margin: 0 30% 0 20%; 
 }
+#control{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    background-color: rgb(85, 235, 165);
+    width: 80%;
+    margin-left: 10%;
+    
+}
+#restart {
+    background-color: rgb(85, 235, 165);
+}
+#control >.turn {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    background-color: rgb(85, 235, 165);
+    align-items: center;
+    
+}
+#control > div>p{
+    background-color: rgb(85, 235, 165);
+}
+#normalbutton{
+    background-color: rgb(188, 188, 204);
+    border-radius: 10px;
+    color: rgb(37, 37, 63);
+    padding: 4px;
+    margin: 20px;
+    font-size: large;    
+}
+.computerdot {
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 5px;
+  }
+  .playerdot {
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 5px;
+  }

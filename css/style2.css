@@ -1,0 +1,52 @@
+
+h2{
+    text-align: center;
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#board{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(34, 34, 110);
+    width: 90%;
+    margin: 5% 5% 0 5%; 
+}
+#board > button{
+    background-color: white;
+    border-radius: 50%;
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    cursor: pointer;
+    width: 10%;
+}
+#base {
+    height: 20px;
+    background-color: rgb(19, 19, 85);
+}
+#control{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    
+}
+#restart {
+    
+}
+#turn {
+    
+}
+#normalbutton{
+    background-color: rgb(188, 188, 204);
+    border-radius: 10px;
+    color: rgb(37, 37, 63);
+    padding: 20px;
+    margin: 20px;
+    font-size: large;
+    
+}
