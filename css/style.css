@@ -16,7 +16,8 @@ h2{
     flex-wrap: wrap;
     background-color: rgb(34, 34, 110);
     width: 40%;
-    margin: 0 30% 0 30%; 
+    margin: 0 30% 0 30%;
+    border-radius: 10px; 
 }
 #board > button{
     background-color: white;
@@ -33,6 +34,7 @@ h2{
     width: 50%;
     background-color: rgb(19, 19, 85);
     margin: 0 40% 0 25%; 
+    border-radius: 10px;
 }
 #control{
     display: flex;
@@ -41,6 +43,7 @@ h2{
     background-color: rgb(85, 235, 165);
     width: 80%;
     margin-left: 10%;
+    border-radius: 10px;
     
 }
 #restart {
@@ -49,7 +52,6 @@ h2{
 #control >.turn {
     display: flex;
     flex-direction: row;
-    /* justify-content: space-around; */
     background-color: rgb(85, 235, 165);
     align-items: center;
     
@@ -79,10 +81,14 @@ h2{
     border-radius: 50%;
     margin: 5px;
   }
+ footer{
+     margin-top: 0;
+ }
   #footer{
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      padding: 0 5%;
   }
 .copyright{
     text-align: right;
