@@ -1,2 +1,2 @@
-# MyProject1
-connect4 game 
+# MyProject1 solution ..
+(connect4 game )
