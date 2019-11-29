@@ -1,6 +1,30 @@
-p{
-    color: aqua;
+
+h2{
+    text-align: center;
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#board{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(34, 34, 110);
+    width: 90%;
+    margin: 5% 5% 0 5%; 
 }
 button{
-    background-color: black;
+    background-color: rgb(196, 159, 159);
+    border-radius: 50%;
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    cursor: pointer;
+}
+#base {
+    height: 20px;
+    background-color: rgb(19, 19, 85);
 }

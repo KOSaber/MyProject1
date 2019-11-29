@@ -1,3 +1,3 @@
-window.onload = function () {
-    this.alert("its working")
-    }
+// window.onload = function () {
+//     this.alert("its working")
+//     }
