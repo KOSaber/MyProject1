@@ -17,12 +17,13 @@ h2{
     margin: 5% 5% 0 5%; 
 }
 button{
-    background-color: rgb(196, 159, 159);
+    background-color: white;
     border-radius: 50%;
     color: white;
     padding: 20px;
     margin: 20px;
     cursor: pointer;
+    width: 10%;
 }
 #base {
     height: 20px;
