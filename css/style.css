@@ -15,8 +15,8 @@ h2{
     align-content: center;
     flex-wrap: wrap;
     background-color: rgb(34, 34, 110);
-    width: 50%;
-    margin: 0 25% 0 25%; 
+    width: 40%;
+    margin: 0 30% 0 30%; 
 }
 #board > button{
     background-color: white;
@@ -30,9 +30,9 @@ h2{
 }
 #base {
     height: 20px;
-    width: 60%;
+    width: 50%;
     background-color: rgb(19, 19, 85);
-    margin: 0 30% 0 20%; 
+    margin: 0 40% 0 25%; 
 }
 #control{
     display: flex;
@@ -62,7 +62,7 @@ h2{
     border-radius: 10px;
     color: rgb(37, 37, 63);
     padding: 4px;
-    margin: 20px;
+    margin: 10px;
     font-size: large;    
 }
 .computerdot {
@@ -79,3 +79,11 @@ h2{
     border-radius: 50%;
     margin: 5px;
   }
+  #footer{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  }
+.copyright{
+    text-align: right;
+}
