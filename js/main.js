@@ -4,75 +4,48 @@ window.onload = function () {
 
 var turn = 0;
 
+
 function play(divnumber){
 
  var id = divnumber.attr("id");
  var newid= "#"+id;
 
- //console.log($(`${newid} > span:first-child` ));
+for(i=1; i<=4 ; i++){
 
-  if(!($(`${newid} > span:first-child` ).hasClass(" red")) && !($(`${newid} > span:first-child`).hasClass(" yellow"))){
+
+    if(!($(`${newid} > span:nth-child(`+ i +`)` ).hasClass("cir red")) && !($(`${newid} > span:nth-child(` + i + `)`).hasClass("cir yellow")))
+    {
   
-    if(turn==0){
-      $(`${newid} > span:first-child`).addClass(" red");
-      changeturn();
-      // here check code
-               }
-    else if(turn==1) {
-      $(`${newid} > span:first-child`).addClass(" yellow");
-      changeturn();
-      // here check code
-          }
+      if(turn==0){
+        $(`${newid} > span:nth-child(`+ i +`)`).addClass(" red");
+        changeturn();
+        // here check code
+                 }
+      else if(turn==1) {
+        $(`${newid} > span:nth-child(`+ i +`)`).addClass(" yellow");
+        changeturn();
+        // here check code
+            }
+break;
 
-                                                              }
-  else if(!$( `${newid} > span:nth-child(2)` ).hasClass(" red") && !$(`${newid} > span:nth-child(2)`).hasClass(" yellow")){
-    if(turn==0){
-      $(`${newid} > span:nth-child(2)`).addClass(" red")
-      changeturn();
-      // here check code
-               }
-    else if(turn==1)  {
-      $(`${newid} > span:nth-child(2)`).addClass(" yellow")
-      changeturn();
-      // here check code
-          }
-                                                                      }                                                         
-   else if(!$( `${newid} > span:nth-child(3)` ).hasClass(" red") && !$( `${newid} > span:nth-child(3)` ).hasClass(" yellow")){
-    if(turn==0){
-      $( `${newid} > span:nth-child(3)` ).addClass(" red")
-      changeturn();
-      // here check code
-               }
-   else if(turn==1) {
-      $( `${newid} > span:nth-child(3)` ).addClass(" yellow")
-      changeturn();
-      // here check code
-         }
-                                                                    }
-  else if(!$( `${newid} > span:nth-child(4)` ).hasClass(" red") && !$( `${newid} > span:nth-child(4)` ).hasClass(" yellow")){
-    if(turn==0){
-       $( `${newid} > span:nth-child(4)` ).addClass(" red")
-       changeturn();
-       // here check code
-               }
-    else if(turn==1) {
-       $( `${newid} > span:nth-child(4)` ).addClass(" yellow")
-       changeturn();
-       // here check code
-       }
-  else return 0;                                                                  } 
+    }
+                    }
+                       } 
 
-}
+
 
 function changeturn()
 {
 if(turn==0){
+  $(".computerdot").removeClass(" yellow");
   $(".playerdot").addClass(" red");
   turn=1;
 }
 else if(turn==1){
+  $(".playerdot").removeClass(" red");
   $(".computerdot").addClass(" yellow");
     turn=0;
+
   }
 }
 
@@ -84,14 +57,17 @@ $(document).ready(function(){
 })
 });
 
- 
+changeturn();
 
     $("#board > div").click(function(){
       play($(this));
     });
 
     $("#normalbutton").click(function(){
-      window.onload();
+      $("[class*='cir']").removeClass("red yellow");
+      $(".playerdot").removeClass("red");
+      $(".computerdot").removeClass("yellow");
+      changeturn();
     });
   
 
