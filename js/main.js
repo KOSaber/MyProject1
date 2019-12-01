@@ -36,15 +36,15 @@ break;
 
 function changeturn()
 {
-if(turn==0){
+if(turn==1){
   $(".computerdot").removeClass(" yellow");
   $(".playerdot").addClass(" red");
-  turn=1;
+  turn=0;
 }
-else if(turn==1){
+else if(turn==0){
   $(".playerdot").removeClass(" red");
   $(".computerdot").addClass(" yellow");
-    turn=0;
+    turn=1;
 
   }
 }
