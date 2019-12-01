@@ -23,7 +23,7 @@ h3{
     margin: 0 30% 0 30%;
     border-radius: 10px; 
 }
-#board > button{
+/* #board > button{
     background-color: white;
     border-radius: 50%;
     color: rgba(19, 19, 85,0);
@@ -32,7 +32,7 @@ h3{
     cursor: pointer;
     width: 15%;
     font-size: 24px;
-}
+} */
 #base {
     height: 20px;
     width: 50%;
@@ -97,3 +97,26 @@ h3{
 .copyright{
     text-align: right;
 }
+
+.cir{
+    display: flex;
+    height: 80px;
+    width: 80px;
+    background-color:white;
+    border-radius: 50%;
+    margin: 10px;
+
+}
+#colum1,#colum2,#colum3,#colum4{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    background-color: rgb(34, 34, 110);
+}
+.red{
+    background-color: red;
+    }
+    .yellow{
+    background-color: yellow;
+    }
+
