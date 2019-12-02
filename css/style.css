@@ -63,7 +63,7 @@ h3{
 #control > div>p{
     background-color: rgb(85, 235, 165);
 }
-#normalbutton{
+#restartbutton{
     background-color: rgb(188, 188, 204);
     border-radius: 10px;
     color: rgb(37, 37, 63);
