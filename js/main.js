@@ -41,10 +41,8 @@ for(i=1; i<=4 ; i++){
         }
         if((winnerc==4) || (winnerr==4) )
         {
-          setTimeout(function(){ alert("you won!!"); }, 200);
+          setTimeout(function(){ alert("Player1 won!!"); }, 200);
           setTimeout(function(){ reset(); }, 300);
-          // alert("you won!!"); 
-          // reset();
         }
 
         // -------------
@@ -56,7 +54,6 @@ for(i=1; i<=4 ; i++){
         // chick win
         winnerc=0;
         winnerr=0;
-        winnerd=0;
 
         for(j=1;j<=4;j++){
           //==== ckick win col
@@ -69,20 +66,15 @@ for(i=1; i<=4 ; i++){
           {
             winnerr +=1;
           }
-          
-
-          //--------------
 
         }
         if((winnerc==4) || (winnerr==4) ){
           
-          setTimeout(function(){ alert("Computer won!!"); }, 200);
+          setTimeout(function(){ alert("Player2 won!!"); }, 200);
           setTimeout(function(){ reset(); }, 300);
-          // alert("Computer won!!");
-          // reset();
+
         }
         
-
         changeturn();
         
             }
@@ -93,23 +85,23 @@ break;
       //------ check diagonal win
     if($(`${"#colum1"} > span:nth-child(1)`).hasClass("cir red") && $(`${"#colum2"} > span:nth-child(2)`).hasClass("cir red") && $(`${"#colum3"} > span:nth-child(3)`).hasClass("cir red") && $(`${"#colum4"} > span:nth-child(4)`).hasClass("cir red"))
       {
-        setTimeout(function(){ alert("You won!!"); }, 200);
+        setTimeout(function(){ alert("Player1 won!!"); }, 200);
         setTimeout(function(){ reset(); }, 300);
       }
     if($(`${"#colum1"} > span:nth-child(1)`).hasClass("cir yellow") && $(`${"#colum2"} > span:nth-child(2)`).hasClass("cir yellow") && $(`${"#colum3"} > span:nth-child(3)`).hasClass("cir yellow") && $(`${"#colum4"} > span:nth-child(4)`).hasClass("cir yellow"))
       {
-        setTimeout(function(){ alert("Computer won!!"); }, 200);
+        setTimeout(function(){ alert("Player2 won!!"); }, 200);
         setTimeout(function(){ reset(); }, 300);
       }
       //
     if($(`${"#colum1"} > span:nth-child(4)`).hasClass("cir red") && $(`${"#colum2"} > span:nth-child(3)`).hasClass("cir red") && $(`${"#colum3"} > span:nth-child(2)`).hasClass("cir red") && $(`${"#colum4"} > span:nth-child(1)`).hasClass("cir red"))
       {
-        setTimeout(function(){ alert("You won!!"); }, 200);
+        setTimeout(function(){ alert("Player1 won!!"); }, 200);
         setTimeout(function(){ reset(); }, 300);
       }
     if($(`${"#colum1"} > span:nth-child(4)`).hasClass("cir yellow") && $(`${"#colum2"} > span:nth-child(3)`).hasClass("cir yellow") && $(`${"#colum3"} > span:nth-child(2)`).hasClass("cir yellow") && $(`${"#colum4"} > span:nth-child(1)`).hasClass("cir yellow"))
       {
-        setTimeout(function(){ alert("Computer won!!"); }, 200);
+        setTimeout(function(){ alert("Player2 won!!"); }, 200);
         setTimeout(function(){ reset(); }, 300);
       }
 
@@ -118,7 +110,6 @@ break;
     if(countertie == 16)
     {
       setTimeout(function(){ alert("it's tie!!"); }, 300);
-      // alert("it's tie!!");
     }
                        } 
 
