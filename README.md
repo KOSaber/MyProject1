@@ -11,40 +11,21 @@
 A Connect4 Game which designed for 2 playeres each player has color by clicking start the game it will start and change turn after each play and alert if any player win or it's tie .
 
 # Used Technologies
-👉 Watch it <a href="https://www.youtube.com/watch?v=6SG2Mjpv8YE">here</a>.
-<br>
 
-[![Watch demo](https://cloud.githubusercontent.com/assets/2263909/18597112/0622a3b0-7c6a-11e6-897d-13f0aa36b6e4.png)](https://www.youtube.com/watch?v=6SG2Mjpv8YE)
+- [x] Offline support
+- [x] Cross-platform
+- [x] Awesome sounds
+- [x] No singup/login required
+- [ ] Auto launch
+- [ ] Auto updates
 
-<img src="https://j.gifs.com/BBqE8Y.gif">
 
 
 ### wireframes 
-Clone the source locally:
+👉 Watch it <img src="https://j.gifs.com/BBqE8Y.gif">
+<br>
 
-```sh
-$ git clone https://github.com/akashnimare/foco/
-$ cd foco
-```
-If you're on Debian or Ubuntu, you'll also need to install
-`nodejs-legacy`:
-
-Use your package manager to install `npm`.
-
-```sh
-$ sudo apt-get install npm nodejs-legacy
-```
-
-Install project dependencies:
-
-```sh
-$ npm install
-```
-Start the app:
-
-```sh
-$ npm start
-```
+[![Watch demo](https://cloud.githubusercontent.com/assets/2263909/18597112/0622a3b0-7c6a-11e6-897d-13f0aa36b6e4.png)]
 
 ### User stories
 
@@ -59,26 +40,64 @@ $ npm run build:linux
 
 ## Development Process and problem-solving strategy
 
-- [x] Offline support
-- [x] Cross-platform
-- [x] Awesome sounds
-- [x] No singup/login required
-- [ ] Auto launch
-- [ ] Auto updates
-
 
 ## Future plans
 
-<kbd>Command/ctrl + R</kbd> - Reload
 
-<kbd>command + q</kbd> - Quit App (while window is open).
 
 ## Winner code 
-- [Electron](https://electron.atom.io)
-- [Menubar](https://github.com/maxogden/menubar)
+```sh
+// chick win
+        winnerc=0;
+        winnerr=0;
+
+        for(j=1;j<=4;j++){
+          //==== ckick win col
+          if($(`${newid} > span:nth-child(`+j+`)` ).hasClass("cir yellow"))
+          {
+            winnerc += 1;
+          }
+          //-----check win row
+          if($(`${"#colum"}`+ j + ` > span:nth-child(`+ i +`)`).hasClass("cir yellow"))
+          {
+            winnerr +=1;
+          }
+
+        }
+        if((winnerc==4) || (winnerr==4) ){
+          
+          setTimeout(function(){ alert("Player2 won!!"); }, 200);
+          setTimeout(function(){ reset(); }, 300);
+
+        }
+```
+```sh
+    //------ check diagonal win 
+    if($(`${"#colum1"} > span:nth-child(1)`).hasClass("cir red") && $(`${"#colum2"} > span:nth-child(2)`).hasClass("cir red") && $(`${"#colum3"} > span:nth-child(3)`).hasClass("cir red") && $(`${"#colum4"} > span:nth-child(4)`).hasClass("cir red"))
+      {
+        setTimeout(function(){ alert("Player1 won!!"); }, 200);
+        setTimeout(function(){ reset(); }, 300);
+      }
+    if($(`${"#colum1"} > span:nth-child(1)`).hasClass("cir yellow") && $(`${"#colum2"} > span:nth-child(2)`).hasClass("cir yellow") && $(`${"#colum3"} > span:nth-child(3)`).hasClass("cir yellow") && $(`${"#colum4"} > span:nth-child(4)`).hasClass("cir yellow"))
+      {
+        setTimeout(function(){ alert("Player2 won!!"); }, 200);
+        setTimeout(function(){ reset(); }, 300);
+      }
+      //
+    if($(`${"#colum1"} > span:nth-child(4)`).hasClass("cir red") && $(`${"#colum2"} > span:nth-child(3)`).hasClass("cir red") && $(`${"#colum3"} > span:nth-child(2)`).hasClass("cir red") && $(`${"#colum4"} > span:nth-child(1)`).hasClass("cir red"))
+      {
+        setTimeout(function(){ alert("Player1 won!!"); }, 200);
+        setTimeout(function(){ reset(); }, 300);
+      }
+    if($(`${"#colum1"} > span:nth-child(4)`).hasClass("cir yellow") && $(`${"#colum2"} > span:nth-child(3)`).hasClass("cir yellow") && $(`${"#colum3"} > span:nth-child(2)`).hasClass("cir yellow") && $(`${"#colum4"} > span:nth-child(1)`).hasClass("cir yellow"))
+      {
+        setTimeout(function(){ alert("Player2 won!!"); }, 200);
+        setTimeout(function(){ reset(); }, 300);
+      }
+```
 
 ## Favorite functions
-- [zulip-electron](https://github.com/zulip/zulip-electron)
 
-## by KS
+
+## Created by KS ..
 
