@@ -13,22 +13,29 @@ A Connect4 Game which designed for 2 playeres each player has color by clicking 
 ### wireframes :
 👉 Watch it 
 <br>
-<img src="https://j.gifs.com/BBqE8Y.gif">
+<img src="https://github.com/KOSaber/MyProject1/blob/master/img/connect4.jpg" width="400" height="400">
 <br>
-[![Watch demo](https://cloud.githubusercontent.com/assets/2263909/18597112/0622a3b0-7c6a-11e6-897d-13f0aa36b6e4.png)]
+<img src="https://github.com/KOSaber/MyProject1/blob/master/img/wireframe.jpg" width="400" height="400">
+<br>
+<img src="https://github.com/KOSaber/MyProject1/blob/master/img/wireframe2.jpg" width="400" height="400">
+<br>
 
 ### User stories:
 As a user, I should be able to start a new connect 4 game.
 <br>
-<img src="https://j.gifs.com/BBqE8Y.gif">
+<img src="https://github.com/KOSaber/MyProject1/blob/master/img/start.jpg">
+<br>
 As a user, I should be able to click on a square to add marker first and then the other marker, and so on.
-https://github.com/KOSaber/MyProject1/blob/master/vid/diagonal%20win.mp4
 As a user, I should be shown a message after each turn for if I win, lose, tie or who's turn it is next.
-
 As a user, I should not be able to click the same square twice.
 As a user, I should be shown a message when I win, lose or tie.
 As a user, I should not be able to continue playing once I win, lose, or tie
 As a user, I should be able to play the game again without refreshing the page (after finishing the game they can restart the game)
+https://github.com/KOSaber/MyProject1/blob/master/vid/diagonal%20win.mp4
+https://github.com/KOSaber/MyProject1/blob/master/vid/diagonal2%20win.mp4
+https://github.com/KOSaber/MyProject1/blob/master/vid/horizantal%20win.mp4
+https://github.com/KOSaber/MyProject1/blob/master/vid/vertical%20win.mp4
+https://github.com/KOSaber/MyProject1/blob/master/vid/tie.mp4
 
 
 ## Development Process and problem-solving strategy:
