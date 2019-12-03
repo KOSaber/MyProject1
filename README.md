@@ -10,7 +10,7 @@
 
 A Connect4 Game which designed for 2 playeres each player has color by clicking start the game it will start and change turn after each play and alert if any player win or it's tie .
 
-# Demo
+# Used Technologies
 👉 Watch it <a href="https://www.youtube.com/watch?v=6SG2Mjpv8YE">here</a>.
 <br>
 
@@ -19,7 +19,7 @@ A Connect4 Game which designed for 2 playeres each player has color by clicking 
 <img src="https://j.gifs.com/BBqE8Y.gif">
 
 
-### For developers
+### wireframes 
 Clone the source locally:
 
 ```sh
@@ -46,7 +46,7 @@ Start the app:
 $ npm start
 ```
 
-### Build installers
+### User stories
 
 Build app for OSX
 ```sh
@@ -57,7 +57,7 @@ Build app for Linux
 $ npm run build:linux
 ```
 
-## Features
+## Development Process and problem-solving strategy
 
 - [x] Offline support
 - [x] Cross-platform
@@ -67,19 +67,18 @@ $ npm run build:linux
 - [ ] Auto updates
 
 
-## Usage
+## Future plans
 
 <kbd>Command/ctrl + R</kbd> - Reload
 
 <kbd>command + q</kbd> - Quit App (while window is open).
 
-## Built with
+## Winner code 
 - [Electron](https://electron.atom.io)
 - [Menubar](https://github.com/maxogden/menubar)
 
-## Related
+## Favorite functions
 - [zulip-electron](https://github.com/zulip/zulip-electron)
 
-## License
+## by KS
 
-MIT  © [Akash Nimare](http://akashnimare.in)
