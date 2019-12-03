@@ -5,7 +5,11 @@ window.onload = function () {
 var turn = 0;
 var countertie=0;
 
-
+/* play function called whenever any div clicked and take it as aparameter so that it check first circle in div that is clicked 
+if its didnt have color class it will add color class to it by seeing which player turn is now and check if there is vertical or 
+horizantal winner if yes finish the game and reset it if no increase the increment counter and check if there is diagonal winner 
+if yes reset the game if no it will change turn and go out of the function 
+*/
 function play(divnumber){
 
  var id = divnumber.attr("id");
@@ -82,7 +86,7 @@ break;
 
     }
                     }
-      //------ check diagonal win
+      //------ check diagonal win 
     if($(`${"#colum1"} > span:nth-child(1)`).hasClass("cir red") && $(`${"#colum2"} > span:nth-child(2)`).hasClass("cir red") && $(`${"#colum3"} > span:nth-child(3)`).hasClass("cir red") && $(`${"#colum4"} > span:nth-child(4)`).hasClass("cir red"))
       {
         setTimeout(function(){ alert("Player1 won!!"); }, 200);
@@ -105,15 +109,16 @@ break;
         setTimeout(function(){ reset(); }, 300);
       }
 
-      //----   check tie             
+      //----   check tie   by make counter start from 0 and chick it if equal 16 and no one win its be tie          
 
     if(countertie == 16)
     {
       setTimeout(function(){ alert("it's tie!!"); }, 300);
+      setTimeout(function(){ reset(); }, 300);
     }
                        } 
 
-
+// changeturn function check if its player1 turn or player2 turn to change turn color and remove previous color of other player
 
 function changeturn()
 {
@@ -129,7 +134,7 @@ else if(turn==0){
 
   }
 }
-
+// function change div color when mouse over it and return its color when mouse move out its range
 $(document).ready(function(){
   $("#board > div").hover(function(){
     $(this).css("background-color", "green");
@@ -139,11 +144,12 @@ $(document).ready(function(){
 });
 
 changeturn();
-
+// each time any div clicked it will call play function and send div that is clicked as parameter 
     $("#board > div").click(function(){
       play($(this));
     });
-
+//reset function make clearfor the bored of the game by remove color classes from circles and turn colores
+//and reset tie counter and call changeturn function 
     function reset(){
   
       $("[class*='cir']").removeClass("red yellow");
@@ -153,7 +159,7 @@ changeturn();
       setTimeout(function(){ changeturn(); }, 500);
 
     }
-
+// if restart game button clicked it will call reset function
   $("#restartbutton").click(function(){
     reset();
   });
