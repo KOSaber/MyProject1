@@ -40,7 +40,14 @@ https://github.com/KOSaber/MyProject1/blob/master/vid/tie.mp4
 
 ## Development Process and problem-solving strategy:
 
-
+- [x]  functions
+- [x]  methods
+- [x]  variables
+- [x]  loops
+- [x]  alert
+- [x]  if else
+- [x]  if condition
+- [x]  selectores
 
 ## Future plans:
 - [x]  artificial intelligence (computer play againest the player and try to peat me)
