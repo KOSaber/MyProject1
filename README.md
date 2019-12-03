@@ -5,14 +5,13 @@ A Connect4 Game which designed for 2 playeres each player has color by clicking 
 
 # Used Technologies:
 - [x] JavaScript
-- [x] Jquery
+- [x] DOM with Jquery
 - [x] CSS
 - [x] HTML
-- [ ] DOM
 
 ### wireframes :
 👉 Watch it 
-<br>
+<br><br>
 <img src="https://github.com/KOSaber/MyProject1/blob/master/img/connect4.jpg" width="400" height="400">
 <br>
 <img src="https://github.com/KOSaber/MyProject1/blob/master/img/wireframe.jpg" width="400" height="400">
@@ -31,6 +30,7 @@ As a user, I should not be able to click the same square twice.
 As a user, I should be shown a message when I win, lose or tie.
 As a user, I should not be able to continue playing once I win, lose, or tie
 As a user, I should be able to play the game again without refreshing the page (after finishing the game they can restart the game)
+<br>
 https://github.com/KOSaber/MyProject1/blob/master/vid/diagonal%20win.mp4
 https://github.com/KOSaber/MyProject1/blob/master/vid/diagonal2%20win.mp4
 https://github.com/KOSaber/MyProject1/blob/master/vid/horizantal%20win.mp4
