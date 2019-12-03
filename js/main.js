@@ -60,7 +60,8 @@ for(i=1; i<=4 ; i++){
         winnerr=0;
 
         for(j=1;j<=4;j++){
-          //==== ckick win col
+          //==== check win row ckeck when he click the div at row he add at it if all circles at same livel
+          // in other colums have same color 
           if($(`${newid} > span:nth-child(`+j+`)` ).hasClass("cir yellow"))
           {
             winnerc += 1;
