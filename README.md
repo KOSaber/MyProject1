@@ -49,6 +49,13 @@ https://github.com/KOSaber/MyProject1/blob/master/vid/tie.mp4
 - [x]  if condition
 - [x]  selectores
 
+## Game Features :
+- [x]  alert the winner name
+- [x]  alert if its tie
+- [x]  restart game button
+- [x]  user color switching
+- [x]  alert dialog
+
 ## Future plans:
 - [x]  artificial intelligence (computer play againest the player and try to peat me)
 - [x]  user can add his name 

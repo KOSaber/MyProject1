@@ -1,6 +1,6 @@
 window.onload = function () {
-    this.alert("let's start the game ..")
-   
+   Swal.fire({position: 'center',icon: 'success',title: "Welcome to Connect 4 game.. Let's starts",showConfirmButton: false,timer: 3000
+     })
 
 var turn = 0;
 var countertie=0;
@@ -45,7 +45,7 @@ for(i=1; i<=4 ; i++){
         }
         if((winnerc==4) || (winnerr==4) )
         {
-          setTimeout(function(){ alert("Player1 won!!"); }, 200);
+          win1();
           setTimeout(function(){ reset(); }, 300);
         }
 
@@ -60,8 +60,8 @@ for(i=1; i<=4 ; i++){
         winnerr=0;
 
         for(j=1;j<=4;j++){
-          //==== check win row ckeck when he click the div at row he add at it if all circles at same livel
-          // in other colums have same color 
+          /*==== check win row ckeck when he click the div at row he add at it if all circles at same livel
+           in other colums have same color */
           if($(`${newid} > span:nth-child(`+j+`)` ).hasClass("cir yellow"))
           {
             winnerc += 1;
@@ -74,10 +74,9 @@ for(i=1; i<=4 ; i++){
 
         }
         if((winnerc==4) || (winnerr==4) ){
-          
-          setTimeout(function(){ alert("Player2 won!!"); }, 200);
-          setTimeout(function(){ reset(); }, 300);
 
+          win2();
+          setTimeout(function(){ reset(); }, 300);
         }
         
         changeturn();
@@ -90,23 +89,23 @@ break;
       //------ check diagonal win 
     if($(`${"#colum1"} > span:nth-child(1)`).hasClass("cir red") && $(`${"#colum2"} > span:nth-child(2)`).hasClass("cir red") && $(`${"#colum3"} > span:nth-child(3)`).hasClass("cir red") && $(`${"#colum4"} > span:nth-child(4)`).hasClass("cir red"))
       {
-        setTimeout(function(){ alert("Player1 won!!"); }, 200);
+        win1();
         setTimeout(function(){ reset(); }, 300);
       }
     if($(`${"#colum1"} > span:nth-child(1)`).hasClass("cir yellow") && $(`${"#colum2"} > span:nth-child(2)`).hasClass("cir yellow") && $(`${"#colum3"} > span:nth-child(3)`).hasClass("cir yellow") && $(`${"#colum4"} > span:nth-child(4)`).hasClass("cir yellow"))
       {
-        setTimeout(function(){ alert("Player2 won!!"); }, 200);
+        win2();
         setTimeout(function(){ reset(); }, 300);
       }
       //
     if($(`${"#colum1"} > span:nth-child(4)`).hasClass("cir red") && $(`${"#colum2"} > span:nth-child(3)`).hasClass("cir red") && $(`${"#colum3"} > span:nth-child(2)`).hasClass("cir red") && $(`${"#colum4"} > span:nth-child(1)`).hasClass("cir red"))
       {
-        setTimeout(function(){ alert("Player1 won!!"); }, 200);
+        win1();
         setTimeout(function(){ reset(); }, 300);
       }
     if($(`${"#colum1"} > span:nth-child(4)`).hasClass("cir yellow") && $(`${"#colum2"} > span:nth-child(3)`).hasClass("cir yellow") && $(`${"#colum3"} > span:nth-child(2)`).hasClass("cir yellow") && $(`${"#colum4"} > span:nth-child(1)`).hasClass("cir yellow"))
       {
-        setTimeout(function(){ alert("Player2 won!!"); }, 200);
+        win2();
         setTimeout(function(){ reset(); }, 300);
       }
 
@@ -114,7 +113,8 @@ break;
 
     if(countertie == 16)
     {
-      setTimeout(function(){ alert("it's tie!!"); }, 300);
+      setTimeout(function(){Swal.fire({title: "it's tie!!",imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7A48LlvASByvO4sUkzQoQOzYrtFSlstzVR4JqwmlQDyM90UFB&s',
+        imageWidth: 400,imageHeight: 200,imageAlt: 'Tie image', })}, 200);
       setTimeout(function(){ reset(); }, 300);
     }
                        } 
@@ -138,7 +138,7 @@ else if(turn==0){
 // function change div color when mouse over it and return its color when mouse move out its range
 $(document).ready(function(){
   $("#board > div").hover(function(){
-    $(this).css("background-color", "green");
+    $(this).css("background-color", "rgb(90, 90, 109)");
 }, function(){
     $(this).css("background-color", "rgb(34, 34, 110)");
 })
@@ -149,8 +149,8 @@ changeturn();
     $("#board > div").click(function(){
       play($(this));
     });
-//reset function make clearfor the bored of the game by remove color classes from circles and turn colores
-//and reset tie counter and call changeturn function 
+/*reset function make clearfor the bored of the game by remove color classes from circles and turn colores
+and reset tie counter and call changeturn function */
     function reset(){
   
       $("[class*='cir']").removeClass("red yellow");
@@ -165,7 +165,16 @@ changeturn();
     reset();
   });
     
-  
+  function win1(){
+    setTimeout(function(){Swal.fire({
+      title: "Player1 won!!",imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7ioutXATBUb-RGf20eUdOfrvP3JpW0mbN5gUS-xriGrp8WtBAkQ&s',
+      imageWidth: 200,imageHeight: 200,imageAlt: 'Winner Image', })}, 200);
+  }
 
+  function win2(){
+    setTimeout(function(){Swal.fire({
+      title: "Player2 won!!",imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7ioutXATBUb-RGf20eUdOfrvP3JpW0mbN5gUS-xriGrp8WtBAkQ&s',
+      imageWidth: 200,imageHeight: 200,imageAlt: 'Winner Image', })}, 200);
+  }
 
   }

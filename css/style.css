@@ -1,5 +1,5 @@
 *{
-    background-color: rgb(202, 198, 198);
+    background-color: rgb(203, 223, 230);
 }
 h3{
     text-align: center;
@@ -14,7 +14,7 @@ h3{
     display: flex;
     justify-content: center;
     align-content: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     background-color: rgb(34, 34, 110);
     width: 40%;
     margin: 0 30% 0 30%;
@@ -23,7 +23,7 @@ h3{
 #base {
     height: 20px;
     width: 50%;
-    background-color: rgb(19, 19, 85);
+    background-color: rgb(9, 9, 78);
     margin: 0 40% 0 25%; 
     border-radius: 10px;
 }
@@ -92,6 +92,7 @@ h3{
     background-color:white;
     border-radius: 50%;
     margin: 10px;
+    cursor: pointer;
 
 }
 #colum1,#colum2,#colum3,#colum4{
