@@ -141,3 +141,4 @@ reset function make clearfor the bored of the game by remove color classes from 
     }
 ```
 ## Created by KS ..
+https://kosaber.github.io/MyProject1/
