@@ -124,13 +124,13 @@ break;
 function changeturn()
 {
 if(turn==1){
-  $(".computerdot").removeClass(" yellow");
-  $(".playerdot").addClass(" red");
+  $(".player2dot").removeClass(" yellow");
+  $(".player1dot").addClass(" red");
   turn=0;
 }
 else if(turn==0){
-  $(".playerdot").removeClass(" red");
-  $(".computerdot").addClass(" yellow");
+  $(".player1dot").removeClass(" red");
+  $(".player2dot").addClass(" yellow");
     turn=1;
 
   }
@@ -154,8 +154,8 @@ changeturn();
     function reset(){
   
       $("[class*='cir']").removeClass("red yellow");
-      $(".playerdot").removeClass("red");
-      $(".computerdot").removeClass("yellow");
+      $(".player1dot").removeClass("red");
+      $(".player2dot").removeClass("yellow");
       countertie=0;
       setTimeout(function(){ changeturn(); }, 500);
 
