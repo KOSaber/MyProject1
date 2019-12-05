@@ -1,5 +1,7 @@
-# MyProject1 solution ..
-(connect4 game )
+# connect4 game solution ..
+<br>
+<img src="https://github.com/KOSaber/MyProject1/blob/master/img/connect4 starting.jpg">
+<br>
 
 A Connect4 Game which designed for 2 playeres each player has color by clicking start the game it will start and change turn after each play and alert if any player win or it's tie .
 
@@ -21,9 +23,6 @@ A Connect4 Game which designed for 2 playeres each player has color by clicking 
 
 ### User stories:
 As a user, I should be able to start a new connect 4 game.
-<br>
-<img src="https://github.com/KOSaber/MyProject1/blob/master/img/start.jpg">
-<br>
 As a user, I should be able to click on a square to add marker first and then the other marker, and so on.
 As a user, I should be shown a message after each turn for if I win, lose, tie or who's turn it is next.
 As a user, I should not be able to click the same square twice.
@@ -84,6 +83,21 @@ https://github.com/KOSaber/MyProject1/blob/master/vid/tie.mp4
           setTimeout(function(){ alert("Player2 won!!"); }, 200);
           setTimeout(function(){ reset(); }, 300);
         }
+```
+```sh
+// my new check diagonal win function 
+function diagwin(){
+    if($(".diag").not(".red").length == 0 || $(".diag2").not(".red").length == 0)
+    {
+      win1();
+      setTimeout(function(){ reset(); }, 300);
+    }
+    if($(".diag").not(".yellow").length == 0 || $(".diag2").not(".yellow").length == 0)
+    {
+      win2();
+      setTimeout(function(){ reset(); }, 300);
+    }
+}
 ```
 ```sh
     //------ check diagonal win 
