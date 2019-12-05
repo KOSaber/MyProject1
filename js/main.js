@@ -86,28 +86,9 @@ break;
 
     }
                     }
-      //------ check diagonal win 
-    if($(`${"#colum1"} > span:nth-child(1)`).hasClass("cir red") && $(`${"#colum2"} > span:nth-child(2)`).hasClass("cir red") && $(`${"#colum3"} > span:nth-child(3)`).hasClass("cir red") && $(`${"#colum4"} > span:nth-child(4)`).hasClass("cir red"))
-      {
-        win1();
-        setTimeout(function(){ reset(); }, 300);
-      }
-    if($(`${"#colum1"} > span:nth-child(1)`).hasClass("cir yellow") && $(`${"#colum2"} > span:nth-child(2)`).hasClass("cir yellow") && $(`${"#colum3"} > span:nth-child(3)`).hasClass("cir yellow") && $(`${"#colum4"} > span:nth-child(4)`).hasClass("cir yellow"))
-      {
-        win2();
-        setTimeout(function(){ reset(); }, 300);
-      }
-      //
-    if($(`${"#colum1"} > span:nth-child(4)`).hasClass("cir red") && $(`${"#colum2"} > span:nth-child(3)`).hasClass("cir red") && $(`${"#colum3"} > span:nth-child(2)`).hasClass("cir red") && $(`${"#colum4"} > span:nth-child(1)`).hasClass("cir red"))
-      {
-        win1();
-        setTimeout(function(){ reset(); }, 300);
-      }
-    if($(`${"#colum1"} > span:nth-child(4)`).hasClass("cir yellow") && $(`${"#colum2"} > span:nth-child(3)`).hasClass("cir yellow") && $(`${"#colum3"} > span:nth-child(2)`).hasClass("cir yellow") && $(`${"#colum4"} > span:nth-child(1)`).hasClass("cir yellow"))
-      {
-        win2();
-        setTimeout(function(){ reset(); }, 300);
-      }
+      //------call check diagonal win 
+ 
+      diagwin();
 
       //----   check tie   by make counter start from 0 and chick it if equal 16 and no one win its be tie          
 
@@ -177,4 +158,50 @@ and reset tie counter and call changeturn function */
       imageWidth: 200,imageHeight: 200,imageAlt: 'Winner Image', })}, 200);
   }
 
+  
+  function diagwin(){
+    if($(".diag").not(".red").length == 0 || $(".diag2").not(".red").length == 0)
+    {
+      win1();
+      setTimeout(function(){ reset(); }, 300);
+    }
+    if($(".diag").not(".yellow").length == 0 || $(".diag2").not(".yellow").length == 0)
+    {
+      win2();
+      setTimeout(function(){ reset(); }, 300);
+    }
+    // if($(`${"#colum1"} > span:nth-child(1)`).hasClass("cir red") && 
+    //    $(`${"#colum2"} > span:nth-child(2)`).hasClass("cir red") &&
+    //    $(`${"#colum3"} > span:nth-child(3)`).hasClass("cir red") && 
+    //    $(`${"#colum4"} > span:nth-child(4)`).hasClass("cir red"))
+    //   {
+    //     win1();
+    //     setTimeout(function(){ reset(); }, 300);
+    //   }
+    // if($(`${"#colum1"} > span:nth-child(1)`).hasClass("cir yellow") &&
+    //    $(`${"#colum2"} > span:nth-child(2)`).hasClass("cir yellow") &&
+    //    $(`${"#colum3"} > span:nth-child(3)`).hasClass("cir yellow") && 
+    //    $(`${"#colum4"} > span:nth-child(4)`).hasClass("cir yellow"))
+    //   {
+    //     win2();
+    //     setTimeout(function(){ reset(); }, 300);
+    //   }
+    //   //
+    // if($(`${"#colum1"} > span:nth-child(4)`).hasClass("cir red") && 
+    //    $(`${"#colum2"} > span:nth-child(3)`).hasClass("cir red") &&
+    //    $(`${"#colum3"} > span:nth-child(2)`).hasClass("cir red") && 
+    //    $(`${"#colum4"} > span:nth-child(1)`).hasClass("cir red"))
+    //   {
+    //     win1();
+    //     setTimeout(function(){ reset(); }, 300);
+    //   }
+    // if($(`${"#colum1"} > span:nth-child(4)`).hasClass("cir yellow") && 
+    //    $(`${"#colum2"} > span:nth-child(3)`).hasClass("cir yellow") && 
+    //    $(`${"#colum3"} > span:nth-child(2)`).hasClass("cir yellow") &&
+    //    $(`${"#colum4"} > span:nth-child(1)`).hasClass("cir yellow"))
+    //   {
+    //     win2();
+    //     setTimeout(function(){ reset(); }, 300);
+    //   }
   }
+}
