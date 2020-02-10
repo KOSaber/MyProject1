@@ -1,6 +1,6 @@
 # connect4 game solution ..
 <br>
-<img src="https://github.com/KOSaber/MyProject1/blob/master/img/connect4 starting.jpg">
+<img src="https://github.com/KOSaber/MyProject1/blob/master/img/connect4%20starting.png">
 <br>
 
 A Connect4 Game which designed for 2 playeres each player has color by clicking start the game it will start and change turn after each play and alert if any player win or it's tie .
